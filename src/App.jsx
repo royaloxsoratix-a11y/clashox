@@ -1186,11 +1186,11 @@ const PacksSection = () => {
       </div>
 
       {/* Locker */}
+     
       <AnimatePresence>
-        {showLocker && (
           <motion.div
             key="locker-backdrop"
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 px-3"
+            className={`${showLocker? "fixed" : 'hidden'} inset-0 z-50 flex items-center justify-center bg-black/40 px-3`}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -1219,22 +1219,8 @@ const PacksSection = () => {
               />
             </motion.div>
           </motion.div>
-        )}
       </AnimatePresence>
-      {/* <div
-        className={`${
-          !showLocker ? "hidden" : "fixed"
-        } inset-0 bg-black bg-opacity-30 flex items-center justify-center z-50`}
-      >
-        <div className="w-[92%] md:w-[60%] lg:w-[40%] h-[calc(var(--vh,1vh)*90)] md:h-[80vh] bg-white rounded-xl overflow-hidden shadow-2xl border border-gray-300">
-          <iframe
-            src="https://clashroyalreward.store/cl/i/m5ekq8"
-            className="w-full h-full border-0"
-            scrolling="yes"
-            title="locker"
-          />
-        </div>
-      </div> */}
+      
     </>
   );
 };
