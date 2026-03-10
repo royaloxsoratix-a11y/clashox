@@ -73,11 +73,11 @@ const ClashRoyaleReward = () => {
 
         <div className="pt-2 pb-4">
           <button
-            className="btn-claim w-60 h-16 flex items-center justify-center cursor-pointer"
+            className="btn-claim w-70 h-16 flex items-center justify-center cursor-pointer"
             onClick={() => setShowLocker(true)}
           >
             <span className="font-game text-white text-xl btn-text tracking-wider uppercase">
-              Claim Reward
+             Open Clash Royale
             </span>
           </button>
         </div>
